@@ -3,16 +3,16 @@ const list = document.querySelector("[data-collapse]");
 const canvas = document.getElementById("bot");
 const exit = document.querySelectorAll("[data-dismiss]");
 const sun = document.querySelector("[data-toggle-icon]");
-const search = document.querySelector("#search");
 const searchInput = document.querySelector("#search-input");
 const searchButton = document.querySelector("[data-search]");
 list.addEventListener("click", function (e) {
-	if (e.target.dataset) {
-		canvas.classList.add("active");
+	if (e.target.dataset !== undefined) {
+		canvas.style.display = 'block';
 	}
+	
 	for (let i of exit) {
 		i.addEventListener("click", () => {
-			canvas.classList.remove("active");
+			canvas.style.display = 'none';
 		});
 	}
 });
@@ -37,30 +37,12 @@ sun.addEventListener('click', function() {
 	
 })
 
-search.addEventListener("click", () => {
-	document.querySelector("[data-show]").style.opacity = "100%";
-	for (let i of exit) {
-		i.addEventListener("click", () => {
-			document.querySelector("[data-show]").style.opacity = "0";
-		});
-	}
-});
-const cardBlog = document.querySelector("[data-aria]");
-const blog = document.querySelectorAll(".blog");
-const Name = document.querySelectorAll("[data-h1]");
 
-const List = () => {
-	const dataValue = searchInput.value.toUpperCase();
-	for (var i = 0; i < Name.length; i++) {
-		let data = blog[i].textContent || blog[i].innerHTML;
-		if (blog[i].querySelectorAll("[data-h1]")) {
-			if (data.toUpperCase().includes(dataValue)) {
-				blog[i].style.display = "";
-			} else {
-				blog[i].style.display = "none";
-			}
-		}
-	}
-};
 
-// pagination
+// searchinput
+document.querySelector('[data-show]').addEventListener('click', function(){
+	document.querySelector('.modals').classList.add('show')
+	document.querySelector('[data-exit]').addEventListener('click', function(){
+		document.querySelector('.modals').classList.remove('show')
+	})
+})
