@@ -15,10 +15,10 @@ listmenu.addEventListener('click', function(){
 
 
 if(localStorage.getItem('theme-color') === 'dark' || (!('theme-color' in localStorage)) && window.matchMedia('(prefers-color-scheme: dark)').matches){
-		document.getElementById('moon').classList.remove('hidden')
+		document.getElementById('sun').classList.remove('hidden')
 		document.documentElement.classList.add('dark');
 } else {	
-		document.getElementById('sun').classList.remove('hidden')
+		document.getElementById('moon').classList.remove('hidden')
 		document.documentElement.classList.remove('dark');
 }
 sun.addEventListener('click', function(){
