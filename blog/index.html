@@ -1,62 +1,52 @@
 
 <!DOCTYPE html>
 
-
+<html class="dark">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <title></title>
   <link rel="stylesheet" href="/css/style.css">
-  <link rel="stylesheet" href="/css/in.css">
   <script src="/javascript/count.js" defer></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@600&display=swap" rel="stylesheet"> 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
 </head>
 
-<body class="bg-[#181818] dark:bg-white  mx-auto" data-body="body">
-  <div class=" ">
+<body class="dark:bg-[#181818] bg-white  mx-auto" data-body="body">
+  <div id="home">
     <button type="button" aria-controls="lights"
-      class="absolute sm:left-5 lg:right-16 bg-yellow-500 z-[99] focus:ring-yellow-100 focus:bg-gray-200  w-7 rounded rounded-t-none "
-      data-toggle-icon><i class="bi bi-sun hidden text-gray-900 " id="sun"></i><i class="bi bi-moon hidden text-gray-900" id="moon"></i></button>
-    <nav class=" text-gray-900 bg-[#181818] px-2 py-2 shadow-sm ">
-
-      <div class="ml-4 flex sm:justify-between items-center mx-auto">
-        <span
-          class="relative self-center text-2xl font-normal whitespace-normal dark:text-gray-200 text-gray-200  antialiased font-mono cursor-pointer 5sm:text-xl sm:mx-auto ">
-          <a href="/">NooName</a> </span>
-        <button data-collapse type="button" aria-label="button"
-          class="inline-flex order-2 text-2xl  text-gray-500  rounded-lg lg:hidden hover:bg-gray-100focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
-          aria-controls="navbar-default" aria-expanded="false">
-          <i class=" bi bi-list cursor-pointer"></i>
-        </button>
-        <div class=" sm:hidden w-full lg:block lg:w-auto overflow-hidden " id="bot">
-          <ul
-            class="lg:flex  sm:flex lg:flex-row sm:flex-col lg:space-x-8 sm:space-y-1 lg:mt-0 lg:text-lg lg:font-medium sm:absolute sm:left-0 sm:top-0 sm:z-50 sm:w-64 sm:h-[100%] sm:bg-rose-900 sm:overflow-hidden ">
-            <div class="flex items-center justify-between mt-2 lg:hidden ">
-              <span class=" text-white py-2 pr-4 ml-4 font-medium ">Menu</span>
-              <button aria-expanded="true" class=" text-2xl p-2 text-white" data-dismiss><i
-                  class="bi bi-x"></i></button>
+      class="absolute sm:right-32 lg:right-16 bg-yellow-500 z-[99] focus:ring-yellow-100 focus:bg-gray-200  w-7 rounded rounded-t-none "
+      id="toggles"><i class="bi bi-sun hidden text-gray-900 " id="sun"></i><i class="bi bi-moon hidden text-gray-900" id="moon"></i></button>
+    <nav class="px-2 sm:px-4 py-2.5  dark:bg-[#181818] bg-[#181818] shadow-lg ">
+      <div class="">
+        <div class="flex items-center  relative">
+          <div class="text-gray-200 pointer-events-none">
+            <a href="/" class="font-extrabold text-xl  text-gray-200 dark:text-gray-200 block ml-6" style="font-family:'jetBrains Mono', monospace ;">Hilmy</a>
+          </div>
+          <div class="flex items-center  ">
+            <button id="list" name="list"  type="button" class="block absolute right-2 lg:hidden">
+              <span class="list-menu transition duration-500 ease-in-out origin-top-left"></span>
+              <span class="list-menu transition duration-500 ease-in-out"></span>
+              <span class="list-menu transition duration-500 ease-in-out origin-bottom-left"></span>
+            </button>
+            
+            <div id="nav-menu" class="lg:block lg:static lg:max-w-full lg:py-2 lg:shadow-none lg:rounded-none lg:bg-transparent  text-gray-200 hidden absolute sm:py-3 sm:my-2 sm:bg-gray-200 shadow-lg rounded-lg max-w-[250px] w-full right-4 top-full">
+              <ul class="block lg:flex sm:space-y-4 lg:items-center lg:ml-5 ">
+                
+                <li class="list-none" >
+                  <a href="/" class=" lg:text-gray-200 lg:font-bold text-lg sm:text-gray-900 dark:sm:text-gray-900 mx-5 " style="font-family:'jetBrains Mono', monospace ;">Beranda</a>
+                </li>
+                
+                <li class="list-none" >
+                  <a href="/blog/" class=" lg:text-gray-200 lg:font-bold text-lg sm:text-gray-900 dark:sm:text-gray-900 mx-5 " style="font-family:'jetBrains Mono', monospace ;">Blog</a>
+                </li>
+                
+              </ul>
             </div>
-            
-            <li class="block py-2 pr-4 pl-3 ">
-              <a href="/"
-                class=" text-white sm:text-gray-200 hover:border-b focus:border-b dark:text-gray-200 lg:p-0 hover:text-gray-300 sm:p-1  "
-                aria-current="page" aria-label="page" style="font-family: JetBrains Mono, monospace;"><i
-                  class="bi bi-house"></i> Home</a>
-            </li>
-            
-            <li class="block py-2 pr-4 pl-3 ">
-              <a href="/blog/"
-                class=" text-white sm:text-gray-200 hover:border-b focus:border-b dark:text-gray-200 lg:p-0 hover:text-gray-300 sm:p-1  "
-                aria-current="page" aria-label="page" style="font-family: JetBrains Mono, monospace;"><i
-                  class="bi "></i> Blog</a>
-            </li>
-            
-          </ul>
-
+          </div>
         </div>
       </div>
     </nav>
@@ -64,13 +54,14 @@
   </div>
 
 
-<div aria-label="cardBlog" data-aria="cardBlog" class="my-5">
- <span class=" font-medium text-4xl flex items-center ml-5 dark:text-gray-900 text-gray-200">All Blog Posts </span>
+
+<div aria-label="cardBlog" data-card="cardBlog" class="my-5">
+ <span class=" font-medium sm:text-2xl lg:text-4xl flex items-center ml-6 dark:text-gray-200 text-gray-900 6sm:text-[1rem]">All Blog Posts </span>
     <div class="lg:grid lg:grid-cols-2">
      
-    <div class="blog overflow-hidden shadow-lg rounded-sm w-[95%] dark:bg-gray-200 bg-gray-900 1sm:font-medium text-justify   mx-auto my-5 p-3  ">
+    <div class="blog overflow-hidden shadow-lg rounded-sm lg:w-[95%] sm:w-[90%] 6sm:w-[80%] dark:bg-gray-200 bg-gray-900 1sm:font-medium text-justify   mx-auto my-5 p-3  ">
         <div class="flex justify-between">
-            <span class=" text-gray-200 text-center text-2xl whitespace-nowrap 3sm:text-[1.42rem] 5sm:text-[1.20rem] font-mono "
+            <span class=" text-gray-200 text-center text-2xl 6sm:text-md 3sm:text-[1.42rem] 5sm:text-[1.20rem] font-mono "
             data-h1><a href="" class="hover:underline dark:text-gray-900 dark:font-bold">Object Pada Javascript</a></span>
         </div>
         <div class="flex items-center ">
@@ -82,23 +73,23 @@
         
     </div>
      
-    <div class="blog overflow-hidden shadow-lg rounded-sm w-[95%] dark:bg-gray-200 bg-gray-900 1sm:font-medium text-justify   mx-auto my-5 p-3  ">
+    <div class="blog overflow-hidden shadow-lg rounded-sm lg:w-[95%] sm:w-[90%] 6sm:w-[80%] dark:bg-gray-200 bg-gray-900 1sm:font-medium text-justify   mx-auto my-5 p-3  ">
         <div class="flex justify-between">
-            <span class=" text-gray-200 text-center text-2xl whitespace-nowrap 3sm:text-[1.42rem] 5sm:text-[1.20rem] font-mono "
+            <span class=" text-gray-200 text-center text-2xl 6sm:text-md 3sm:text-[1.42rem] 5sm:text-[1.20rem] font-mono "
             data-h1><a href="" class="hover:underline dark:text-gray-900 dark:font-bold">Apa itu This Pada Javascript</a></span>
         </div>
         <div class="flex items-center ">
             <span class="text-gray-200 text-right text-md font-['Nunito'] italic dark:text-gray-900">December 19, 2022</span>
         </div>
         <div class="flex 4sm:flex-wrap 5sm:flex-wrap gap-5 font-medium text-left my-2 font-mono">
-            <p class="text-gray-200 mx-auto font-medium  1sm:text-[0.95rem] dark:text-gray-900 2sm:text-[0.94rem] 3sm:text-[0.94rem] 4sm:text-[0.94rem]"></p>
+            <p class="text-gray-200 mx-auto font-medium  1sm:text-[0.95rem] dark:text-gray-900 2sm:text-[0.94rem] 3sm:text-[0.94rem] 4sm:text-[0.94rem]">LUPA APA SIH</p>
         </div>
         
     </div>
      
-    <div class="blog overflow-hidden shadow-lg rounded-sm w-[95%] dark:bg-gray-200 bg-gray-900 1sm:font-medium text-justify   mx-auto my-5 p-3  ">
+    <div class="blog overflow-hidden shadow-lg rounded-sm lg:w-[95%] sm:w-[90%] 6sm:w-[80%] dark:bg-gray-200 bg-gray-900 1sm:font-medium text-justify   mx-auto my-5 p-3  ">
         <div class="flex justify-between">
-            <span class=" text-gray-200 text-center text-2xl whitespace-nowrap 3sm:text-[1.42rem] 5sm:text-[1.20rem] font-mono "
+            <span class=" text-gray-200 text-center text-2xl 6sm:text-md 3sm:text-[1.42rem] 5sm:text-[1.20rem] font-mono "
             data-h1><a href="" class="hover:underline dark:text-gray-900 dark:font-bold">Membuat Website Dengan 11ty </a></span>
         </div>
         <div class="flex items-center ">
@@ -110,9 +101,9 @@
         
     </div>
      
-    <div class="blog overflow-hidden shadow-lg rounded-sm w-[95%] dark:bg-gray-200 bg-gray-900 1sm:font-medium text-justify   mx-auto my-5 p-3  ">
+    <div class="blog overflow-hidden shadow-lg rounded-sm lg:w-[95%] sm:w-[90%] 6sm:w-[80%] dark:bg-gray-200 bg-gray-900 1sm:font-medium text-justify   mx-auto my-5 p-3  ">
         <div class="flex justify-between">
-            <span class=" text-gray-200 text-center text-2xl whitespace-nowrap 3sm:text-[1.42rem] 5sm:text-[1.20rem] font-mono "
+            <span class=" text-gray-200 text-center text-2xl 6sm:text-md 3sm:text-[1.42rem] 5sm:text-[1.20rem] font-mono "
             data-h1><a href="" class="hover:underline dark:text-gray-900 dark:font-bold">Apa itu CSS </a></span>
         </div>
         <div class="flex items-center ">
@@ -124,9 +115,9 @@
         
     </div>
      
-    <div class="blog overflow-hidden shadow-lg rounded-sm w-[95%] dark:bg-gray-200 bg-gray-900 1sm:font-medium text-justify   mx-auto my-5 p-3  ">
+    <div class="blog overflow-hidden shadow-lg rounded-sm lg:w-[95%] sm:w-[90%] 6sm:w-[80%] dark:bg-gray-200 bg-gray-900 1sm:font-medium text-justify   mx-auto my-5 p-3  ">
         <div class="flex justify-between">
-            <span class=" text-gray-200 text-center text-2xl whitespace-nowrap 3sm:text-[1.42rem] 5sm:text-[1.20rem] font-mono "
+            <span class=" text-gray-200 text-center text-2xl 6sm:text-md 3sm:text-[1.42rem] 5sm:text-[1.20rem] font-mono "
             data-h1><a href="" class="hover:underline dark:text-gray-900 dark:font-bold">Kenapa Milih JAvascript </a></span>
         </div>
         <div class="flex items-center ">
@@ -138,9 +129,9 @@
         
     </div>
      
-    <div class="blog overflow-hidden shadow-lg rounded-sm w-[95%] dark:bg-gray-200 bg-gray-900 1sm:font-medium text-justify   mx-auto my-5 p-3  ">
+    <div class="blog overflow-hidden shadow-lg rounded-sm lg:w-[95%] sm:w-[90%] 6sm:w-[80%] dark:bg-gray-200 bg-gray-900 1sm:font-medium text-justify   mx-auto my-5 p-3  ">
         <div class="flex justify-between">
-            <span class=" text-gray-200 text-center text-2xl whitespace-nowrap 3sm:text-[1.42rem] 5sm:text-[1.20rem] font-mono "
+            <span class=" text-gray-200 text-center text-2xl 6sm:text-md 3sm:text-[1.42rem] 5sm:text-[1.20rem] font-mono "
             data-h1><a href="" class="hover:underline dark:text-gray-900 dark:font-bold">Perbedaan Javascript Dan PHP</a></span>
         </div>
         <div class="flex items-center ">
@@ -163,9 +154,11 @@
         
     </div>
 
-<footer class="relative  shadow flex justify-center items-center p-6  mt-7 bg-gray-900">
-    <span class="text-gray-200 font-medium text-xl">Copyright © NooName 2022 | Made With <a href="https://www.11ty.dev/" class="hover:underline text-rose-500">11ty</a>  | <a href="" class="text-xl text-gray-200 font-medium ">Github</a> | <a href="" class="text-xl text-gray-200 font-medium ">RSS</a></span>
-    
+<footer class="relative  shadow text-center justify-center items-center p-6  mt-7 dark:bg-[#181818] bg-[#181818]">
+    <span class="text-sm text-gray-200  sm:text-center  dark:text-gray-200 ">Copyright 2022. All Rights Reserved</span>
+    <div class="mt-2">
+        <span class="mt-3 text-sm text-gray-200 dark:text-gray-200 ">Made With <a href="https://www.11ty.dev/" class="text-md text-gray-200 font-medium hover:text-gray-500">11ty </a> | <a href="https://tailwindcss.com/" class="text-md font-medium hover:text-sky-600 text-sky-700">Tailwind</a></span>
+    </div>
 </footer>
 </body>
 </html>

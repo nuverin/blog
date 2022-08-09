@@ -1,48 +1,49 @@
 "use strict";
-const list = document.querySelector("[data-collapse]");
+
 const canvas = document.getElementById("bot");
-const exit = document.querySelectorAll("[data-dismiss]");
-const sun = document.querySelector("[data-toggle-icon]");
-const searchInput = document.querySelector("#search-input");
-const searchButton = document.querySelector("[data-search]");
-list.addEventListener("click", function (e) {
-	if (e.target.dataset !== undefined) {
-		canvas.style.display = 'block';
-	}
-	
-	for (let i of exit) {
-		i.addEventListener("click", () => {
-			canvas.style.display = 'none';
-		});
-	}
-});
-// window.onclick = (e) => {
-// 	const ejs = e.target.dataset;
-// 	if (ejs !== null && ejs === list) {
-// 		canvas.classList.add("active");
-// 	}
-// };
+const sun = document.getElementById('toggles');
+const listmenu = document.getElementById('list');
+const navmenu = document.getElementById('nav-menu')
+listmenu.addEventListener('click', function(){
+	listmenu.classList.toggle('list-active');
+	navmenu.classList.toggle('hidden')
+})
 // remove hidden and active block 
-if(localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage))){
-	document.getElementById('moon').classList.remove('hidden')
-} else {
-	document.getElementById('sun').classList.remove('hidden')
+
+
+// filter search
+
+
+if(localStorage.getItem('theme-color') === 'dark' || (!('theme-color' in localStorage)) && window.matchMedia('(prefers-color-scheme: dark)').matches){
+		document.getElementById('moon').classList.remove('hidden')
+		document.documentElement.classList.add('dark');
+} else {	
+		document.getElementById('sun').classList.remove('hidden')
+		document.documentElement.classList.remove('dark');
 }
-sun.addEventListener('click', function() {
-	// toggle icons inside button
-	document.getElementById('sun').classList.toggle('hidden')
-	document.getElementById('moon').classList.toggle('hidden')
-	let html = document.querySelector('html');
-	html.classList.toggle('dark')
+sun.addEventListener('click', function(){
+	// toggle icons for unlock block;
+	document.getElementById('moon').classList.toggle('hidden');
+	document.getElementById('sun').classList.toggle('hidden');
+	if(localStorage.getItem('theme-color')){
+		if(localStorage.getItem('theme-color') === 'light'){
+			document.documentElement.classList.toggle('dark')
+			localStorage.setItem('theme-color', 'dark');
+		} else {
+			document.documentElement.classList.remove('dark');
+			localStorage.setItem('theme-color', 'light')
+		}
+
+	} else {
+		if(document.documentElement.classList.contains('dark')){
+			document.documentElement.classList.remove('dark');
+			localStorage.setItem('theme-color', 'light')
+		} else {
+			document.documentElement.classList.add('dark');
+			localStorage.setItem('theme-color', 'dark')
+		}
+	}
 	
 })
-
-
-
-// searchinput
-document.querySelector('[data-show]').addEventListener('click', function(){
-	document.querySelector('.modals').classList.add('show')
-	document.querySelector('[data-exit]').addEventListener('click', function(){
-		document.querySelector('.modals').classList.remove('show')
-	})
-})
+	
+	// toggle icons inside butto
