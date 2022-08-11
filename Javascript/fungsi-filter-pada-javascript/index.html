@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <title>Tema</title>
+  <title>Fungsi Filter Pada Javascript</title>
   <link rel="stylesheet" href="/css/style.css">
   <script src="/js/count.js" defer></script>
  
@@ -61,9 +61,43 @@
     <div style="font-family: 'Roboto', sans-serif;" class=" mt-10 lg:mx-auto  ">
         <div class="p-2 text-gray-900 dark:text-gray-200 leading-4">
             <div class="text-center">
-                <h1 class=" font-bold tracking-tighter   text-2xl">Tema</h1>
+                <h1 class=" font-bold tracking-tighter   text-2xl">Fungsi Filter Pada Javascript</h1>
             </div>
-            <div class="lg:text-lg sm:text-md my-1 text-justify lg:w-7/12 sm:w-11/12 mx-auto"></div>
+            <div class="lg:text-lg sm:text-md my-1 text-justify lg:w-7/12 sm:w-11/12 mx-auto"><div class="flex flex-col">
+    <span class="text-gray-200 ">Filter Array Dengan Array Yang lain sangat berguna ketika disana terdapat banyak elementnya yang harus dihapus</span>
+    <span class=" text-gray-200 my-4">dibawah ini adalah example code , kita akan menyimpan nilai didalam array</span> 
+    <span>
+</div>
+<div class=" p-0 m-0">
+    <pre tabindex="0" class="bg-gray-900 text-sm overflow-auto  flex ">
+        <code data-lang="Javascript" class="flex flex-col py-2">
+            <div class="flex ml-2">
+                <span class="text-rose-600">let</span>
+                <span class="text-gray-200"> Array =</span>
+                <span> [<span class="text-emerald-400">"consts", "consts", "consts" , "consts" , "consts" ,"consts" ,"consts" ,"consts" , "clothes</span>]</span>
+            </div>
+            <div class="flex ml-2">
+                <span class="text-rose-600">const</span>
+                <span class="text-gray-200"> FilteredArray =</span>
+                <span> [<span class="text-emerald-400">"store", "clothes"</span>]</span>
+            </div>
+            <div class="flex ml-2">
+                <span>// function filter akan menghapus element jika nilainya yang dikembalikan false</span>
+            </div>
+            <div class="flex ml-2">
+                <span>// sebaliknya itu akan disimpan </span>
+            </div>
+            <div class="flex ml-2">
+                <span class="text-gray-200">Array =</span>
+                <span class="text-sky-500"> Array.filter(<span class="text-orange-500">() => {
+<span class="text-gray-200">//function includes Memeriksa Jika element tersedia didalam array akan dipanggil<span>
+<span class="text-orange-500">return <span class="text-sky-500">FilteredArray.includes(element);</span></span>
+}</span>) </span>
+<span class="text-sky-500">console.log(Array);</span> <span class="text-gray-200">Output : // Clothes, Store</span>
+            </div>
+        </code>
+    </pre>
+</div></div>
         </div>
     </div>
 <footer class="relative  shadow text-center justify-center items-center p-6  mt-7 dark:bg-[#181818] bg-[#181818]">
